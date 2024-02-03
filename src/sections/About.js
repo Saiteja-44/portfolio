@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import img1 from "../assets/Imagep1.png";
+import img1 from "../assets/mainimage.png";
 import img2 from "../assets/imagep2.jpeg";
-import img3 from "../assets/Imagep3.jpeg";
+import img3 from "../assets/sidedown.jpeg";
 
 const Section = styled.section`
   min-height: 100vh;

@@ -15,9 +15,12 @@ import img8 from "../assets/aws.svg";
 import img9 from "../assets/file-type-docker.svg";
 import img10 from "../assets/java.png";
 import img11 from "../assets/sass.png";
-import img12 from "../assets/github.svg";
+import img12 from "../assets/icons8-git.svg";
 import img13 from "../assets/net.png";
 import img14 from "../assets/python.svg";
+import img15 from "../assets/icons8-azure.svg";
+import img16 from "../assets/icons8-mysql.svg";
+import img17 from "../assets/icons8-tailwind-css.svg";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -104,7 +107,7 @@ const Product = ({ img, title = "" }) => {
     <Item
       initial={{ filter: "grayscale(100%)" }}
       whileInView={{ filter: "grayscale(0%)" }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.9 }}
       viewport={{ once: false, amount: "all" }}
     >
       <img src={img} alt={title} />
@@ -192,12 +195,15 @@ const Services = () => {
         <Product img={img10} title="Java" />
         <Product img={img14} title="Python" />
         <Product img={img8} title="AWS" />
+        <Product img={img15} title="Azure" />
         <Product img={img5} title="PostgreSQL" />
+        <Product img={img16} title="MySQL" />
         <Product img={img6} title="MongoDB" />
         <Product img={img9} title="Docker" />
         <Product img={img7} title="Kubernetes" />
+        <Product img={img17} title="Tailwind CSS" />
         <Product img={img11} title="SASS" />
-        <Product img={img12} title="Github" />
+        <Product img={img12} title="Git" />
       </Right>
     </Section>
   );

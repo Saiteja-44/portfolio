@@ -16,9 +16,6 @@ const Box = styled(motion.li)`
     height: 75%;
     border-radius: 4%;
     transition: transform 0.2s ease;
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 `;
 const Title = styled.h2`
