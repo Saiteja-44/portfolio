@@ -21,7 +21,7 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   }
@@ -115,7 +115,7 @@ const Marquee = () => {
             data-scroll-speed="-4"
             data-scroll-target="#direction"
           >
-            delivering soluitons
+            delivering solutions
           </span>
         </Banner>
         <Banner

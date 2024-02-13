@@ -13,9 +13,12 @@ const Box = styled(motion.li)`
   overflow: hidden;
   img {
     width: 100%;
-    height: 75%;
+    height: 72%;
     border-radius: 4%;
     transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;
 const Title = styled.h2`

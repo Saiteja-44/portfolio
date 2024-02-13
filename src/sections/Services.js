@@ -66,7 +66,7 @@ const Left = styled.div`
     font-family: "Cabinet Grotesk", sans-serif;
     font-weight: 400;
     width: 80%;
-    margin-top: 5%;
+    margin-top: 4%;
   }
 `;
 

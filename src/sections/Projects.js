@@ -61,9 +61,6 @@ const Project1 = styled.div`
   width: 40%;
   height: 42%;
   border-radius: 3%;
-  &:hover {
-    transform: scale(1.05);
-  }
 `;
 
 const Project2 = styled.div`
@@ -73,21 +70,15 @@ const Project2 = styled.div`
   width: 30%;
   height: 31%;
   border-radius: 3%;
-  &:hover {
-    transform: scale(1.05);
-  }
 `;
 
 const Project3 = styled.div`
   position: absolute;
-  bottom: 7%;
+  bottom: 3%;
   left: 12%;
   width: 30%;
-  height: 33%;
+  height: 40%;
   border-radius: 3%;
-  &:hover {
-    transform: scale(1.05);
-  }
 `;
 
 const Project4 = styled.div`
@@ -97,9 +88,6 @@ const Project4 = styled.div`
   width: 40%;
   height: 42%;
   border-radius: 3%;
-  &:hover {
-    transform: scale(1.05);
-  }
 `;
 
 const Projects = () => {

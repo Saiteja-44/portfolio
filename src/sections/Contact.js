@@ -15,7 +15,7 @@ const Section = styled.section`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   overflow-x: hidden;
 
@@ -55,7 +55,7 @@ const Emailbox = styled.div`
   align-items: center;
 
   img {
-    height: 15%;
+    height: auto;
     width: 15%;
   }
 
@@ -107,40 +107,40 @@ const Resume = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 3%;
+  
   }
 `;
 
 const FooterComponent = styled(motion.footer)`
   width: 80vw;
+  height: 24vh;
 
-  @media (max-width: 48em) {
-    width: 90vw;
-  }
+  
   ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 2rem;
-    margin-top: 4rem;
-    padding: 0 1rem;
+    margin: 1vw;
+    margin-top: 3vw;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+    padding: 0 1.2vw;
+
 
   }
 
   li {
-    padding: 2rem;
+    padding: 1.2vw;
     font-family: "General Sans"
     font-size: 6vw;
     font-weight: 500;
     color:#2e2e2e;
-    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
     }
   }
@@ -148,7 +148,7 @@ const FooterComponent = styled(motion.footer)`
 
 const Bottom = styled.div`
   padding: 0.5rem 0;
-  margin: 0 4rem;
+  margin: 0 4vw;
   font-size: 1vw;
   color: #2e2e2e;
 
@@ -229,7 +229,7 @@ const Contact = () => {
       </Resume>
       <FooterComponent
         initial={{ y: "-400px" }}
-        whileInView={{ y: 0 }}
+        whileInView={{ y: 2 }}
         viewport={{ once: false }}
         transition={{
           duration: 1.5,
@@ -250,20 +250,8 @@ const Contact = () => {
           </li>
         </ul>
         <Bottom>
-          <span
-            data-scroll
-            data-scroll-speed="2"
-            data-scroll-direction="horizontal"
-          >
-            &copy; 2024. All Rights Reserved.
-          </span>
-          <span
-            data-scroll
-            data-scroll-speed="-2"
-            data-scroll-direction="horizontal"
-          >
-            Sai Teja Polampally
-          </span>
+          <span>&copy; 2024. All Rights Reserved.</span>
+          <span>Sai Teja Polampally</span>
         </Bottom>
       </FooterComponent>
     </Section>
