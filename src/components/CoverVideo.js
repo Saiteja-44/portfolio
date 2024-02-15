@@ -103,7 +103,7 @@ const CoverVideo = () => {
     "UI/UX DESIGNER",
     "CLOUD ARCHITECT",
   ];
-  const period = 1000;
+  const period = 1500;
 
   useEffect(() => {
     const tick = () => {
@@ -125,7 +125,7 @@ const CoverVideo = () => {
       } else if (isDeleting && updatedText === "") {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
-        setDelta(200);
+        setDelta(300);
       }
     };
 

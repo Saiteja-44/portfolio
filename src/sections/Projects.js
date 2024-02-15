@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-// import gsap from "gsap";
-// import ScrollTrigger from "gsap/ScrollTrigger";
-import { React, useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { React, useState, useEffect } from "react";
 import styled from "styled-components";
 // import Work from "../components/Workdata";
 // import { Github } from "../assets/Svgs/Svj";
@@ -24,7 +24,7 @@ const Overlay = styled.div`
   width: 100%;
   height: 100%;
   border: 3px solid black;
-  border-radius: 8%;
+  border-radius: 4%;
   background: #000;
 `;
 
@@ -92,8 +92,9 @@ const Project4 = styled.div`
 
 const Projects = () => {
   const [scaling, setscaling] = useState(false);
+
   return (
-    <Section id="Projects">
+    <Section id="Projects" className="panel">
       <Overlay>
         <Title
           data-scroll

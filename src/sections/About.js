@@ -29,7 +29,7 @@ const Left = styled.div`
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 400;
   position: relative;
-  right: 5%;
+  right: 7%;
   z-index: 5;
   margin-top: 18%;
 `;

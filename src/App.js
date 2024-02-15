@@ -13,6 +13,8 @@ import Projects from "./sections/Projects";
 import Services from "./sections/Services";
 import GlobalStyles from "./styles/GlobalStyles";
 import { light } from "./styles/Themes";
+// import gsap from "gsap";
+// import ScrollTrigger from "gsap/ScrollTrigger";
 
 function App() {
   // useLocoScroll();

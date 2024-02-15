@@ -21,6 +21,7 @@ import img14 from "../assets/python.svg";
 import img15 from "../assets/icons8-azure.svg";
 import img16 from "../assets/icons8-mysql.svg";
 import img17 from "../assets/icons8-tailwind-css.svg";
+import img18 from "../assets/aws-dynamodb.svg";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -80,16 +81,26 @@ const Right = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Item = styled(motion.div)`
-  display: inline-block;
-  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 9vw;
   /* background-color: black; */
-  margin-right: 6rem;
+  margin: 1.5vw 7.5vw;
   img {
     width: 100%;
-    height: auto;
+    min-height: 7vw;
     cursor: pointer;
   }
 
@@ -106,10 +117,11 @@ const Product = ({ img, title = "" }) => {
     // x: 100, y: -100
     <Item
       initial={{ filter: "grayscale(100%)" }}
-      whileInView={{ filter: "grayscale(0%)" }}
-      transition={{ duration: 0.9 }}
+      whileHover={{ filter: "grayscale(0%)", scale: 1.05 }}
+      transition={{ duration: 0.3 }}
       viewport={{ once: false, amount: "all" }}
     >
+      {" "}
       <img src={img} alt={title} />
       <h1>{title}</h1>
     </Item>
@@ -138,7 +150,7 @@ const Services = () => {
           scroller: ".App", //locomotive-scroll
           scrub: 1,
           pin: true,
-          // markers: true,
+          markers: true,
           // anticipatePin: 1,
         },
         height: `${scrollingElement.scrollWidth}px`,
@@ -152,7 +164,7 @@ const Services = () => {
           end: `${pinWrapWidth} bottom`,
           scroller: ".App", //locomotive-scroll
           scrub: 1,
-          // markers: true,
+          markers: true,
         },
         x: -pinWrapWidth,
 
@@ -169,7 +181,7 @@ const Services = () => {
   }, []);
 
   return (
-    <Section ref={ref} id="Skills">
+    <Section ref={ref} id="Skills" className="panel">
       <Title data-scroll data-scroll-speed="-1">
         Skills
       </Title>
@@ -187,23 +199,36 @@ const Services = () => {
         </p>
       </Left>
       <Right data-scroll ref={Horizontalref}>
-        <Product img={img1} title="React.js" />
-        <Product img={img2} title="Angular.js" />
-        <Product img={img13} title=".Net" />
-        <Product img={img3} title="JavaScript" />
-        <Product img={img4} title="TypeScript" />
-        <Product img={img10} title="Java" />
-        <Product img={img14} title="Python" />
-        <Product img={img8} title="AWS" />
-        <Product img={img15} title="Azure" />
-        <Product img={img5} title="PostgreSQL" />
-        <Product img={img16} title="MySQL" />
-        <Product img={img6} title="MongoDB" />
-        <Product img={img9} title="Docker" />
-        <Product img={img7} title="Kubernetes" />
-        <Product img={img17} title="Tailwind CSS" />
-        <Product img={img11} title="SASS" />
-        <Product img={img12} title="Git" />
+        <div className="cards">
+          <Product img={img1} title="React.js" />
+          <Product img={img2} title="Angular.js" />
+          <Product img={img13} title=".Net" />
+        </div>
+        <div className="cards">
+          <Product img={img3} title="JavaScript" />
+          <Product img={img4} title="TypeScript" />
+          <Product img={img10} title="Java" />
+        </div>
+        <div className="cards">
+          <Product img={img14} title="Python" />
+          <Product img={img8} title="AWS" />
+          <Product img={img15} title="Azure" />
+        </div>
+        <div className="cards">
+          <Product img={img5} title="PostgreSQL" />
+          <Product img={img16} title="MySQL" />
+          <Product img={img6} title="MongoDB" />
+        </div>
+        <div className="cards">
+          <Product img={img18} title="DynamoDB" />
+          <Product img={img9} title="Docker" />
+          <Product img={img7} title="Kubernetes" />
+        </div>
+        <div className="cards">
+          <Product img={img17} title="Tailwind CSS" />
+          <Product img={img11} title="SASS" />
+          <Product img={img12} title="Git" />
+        </div>
       </Right>
     </Section>
   );
