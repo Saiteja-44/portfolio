@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+// import gsap from "gsap";
+// import ScrollTrigger from "gsap/ScrollTrigger";
 import { React, useState, useEffect } from "react";
 import styled from "styled-components";
 // import Work from "../components/Workdata";
