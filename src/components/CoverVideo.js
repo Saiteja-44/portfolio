@@ -27,6 +27,27 @@ const Landing = styled(motion.div)`
   img{
     max-width: 100%;
   }
+  @media (max-width: 30em) {
+    top:30%;
+    left: 12%;
+    width: 80%;
+    height: 80 %;
+  }
+  @media (min-width: 31em) and (max-width: 48em) {
+    top:20%;
+    left: 19%;
+    width: 60%;
+    height: 60%;
+    
+  }
+  @media (min-width: 49em) and (max-width: 64em) {
+    top:20%;
+    left: 19%;
+    width: 60%;
+    height: 60%;
+    
+  }
+
 
 
 `;
@@ -44,11 +65,30 @@ const Title = styled.div`
   align-items: center;
   color: ${(props) => props.theme.text};
 
+  @media (max-width: 48em) {
+    right:5%;
+    bottom: 10%;
+    width: 90%;
+  }
+  @media (min-width: 49em) and (max-width: 64em) {
+    bottom: 10%;
+    width: 90%;
+  }
+
+
+
   h1 {
     font-family: "General Sans", sans-serif;
     font-weight: 700;
-    font-size: 5.5vw;
+    font-size: 5vw;
     text-shadow: 2px 2px 2px ${(props) => props.theme.body};
+
+    @media (max-width: 48em) {
+      font-size: 9vw;
+    }
+    @media (min-width: 49em) and (max-width: 64em) {
+      font-size: 8vw;
+    }
   }
 
   h2 {
@@ -57,10 +97,18 @@ const Title = styled.div`
     -webkit-text-stroke-width: 6px;
     -webkit-text-stroke-color: #86863a;
     font-family: "General Sans";
-    font-size: 5.5vw;
+    font-size: 5vw;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+
+    @media (max-width: 48em) {
+      font-size: 9.5vw);
+      -webkit-text-stroke-width: 2px;
+    }
+    @media (min-width: 49em) and (max-width: 64em) {
+      font-size: 8vw;
+    }
   }
 `;
 const introVariants = {

@@ -33,6 +33,9 @@ const Container = styled.section`
         stroke: #000;
       }
     }
+    @media (max-width: 30em) {
+      width: 2.5rem;
+    }
   }
 `;
 
@@ -43,12 +46,54 @@ const NavContainer = styled(motion.div)`
   align-items: center;
   justify-content: space-evenly;
   list-style-type: none;
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250%;
+    z-index: 55;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
+    li {
+      padding: 30px;
+      font-size: 1.5 vw;
+    }
+  }
+  .Nosidebar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 30em) {
+    .hideOnMobile {
+      display: none;
+    }
+    .Nosidebar {
+      justify-content: flex-end;
+      padding: 0 15px;
+    }
+  }
+  @media (min-width: 31em) {
+    .hideOnDesktop {
+      display: none;
+    }
   li {
     font-family: "Cabinet Grotesk", sans-serif;
     font-weight: 700;
     font-size: 1.5 em;
     cursor: pointer;
+  }
+  @media (max-width: 48em) {
+    width: 50%;
   }
 `;
 
@@ -68,6 +113,10 @@ const Text = styled(motion.span)`
   font-family: "General Sans", sans-serif;
   font-weight: 700;
   padding-bottom: 0.1rem;
+
+  @media (max-width: 30em) {
+    font-size: 2em;
+  }
 `;
 
 const pathVariants = {
@@ -109,6 +158,15 @@ const Logo = () => {
   const [click, setClick] = useState(false);
   const { scroll } = useLocomotiveScroll();
 
+  function showSidebar() {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.style.display = "flex";
+  }
+  function hideSidebar() {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.style.display = "none";
+  }
+
   const handleScroll = (id) => {
     let elem = document.querySelector(id);
     // console.log(elem);
@@ -146,34 +204,99 @@ const Logo = () => {
         </Text>
       </Link>
       <NavContainer variants={textVariants} initial="hidden" animate="visible">
-        <motion.li
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-          onClick={() => handleScroll(".about")}
-        >
-          about
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-          onClick={() => handleScroll("#Skills")}
-        >
-          skills
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-          onClick={() => handleScroll("#Projects")}
-        >
-          projects
-        </motion.li>
-        <ConnectBtn
-          whileHover={{ scale: 1.1, backgroundPosition: "100%" }}
-          whiletap={{ scale: 0.9, Y: 0 }}
-          onClick={() => handleScroll("#Contact")}
-        >
-          Let's Connect
-        </ConnectBtn>
+        <div className="Nosidebar">
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => handleScroll(".about")}
+            className="hideOnMobile"
+          >
+            about
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => handleScroll("#Skills")}
+            className="hideOnMobile"
+          >
+            skills
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => handleScroll("#Projects")}
+            className="hideOnMobile"
+          >
+            projects
+          </motion.li>
+          <ConnectBtn
+            whileHover={{ scale: 1.1, backgroundPosition: "100%" }}
+            whiletap={{ scale: 0.9, Y: 0 }}
+            onClick={() => handleScroll("#Contact")}
+            className="hideOnMobile"
+          >
+            Let's Connect
+          </ConnectBtn>
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => showSidebar()}
+            className="hideOnDesktop"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+          </motion.li>
+        </div>
+        <div className="sidebar">
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => hideSidebar()}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => handleScroll(".about")}
+          >
+            about
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => handleScroll("#Skills")}
+          >
+            skills
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9, y: 0 }}
+            onClick={() => handleScroll("#Projects")}
+          >
+            projects
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.1, backgroundPosition: "100%" }}
+            whiletap={{ scale: 0.9, Y: 0 }}
+            onClick={() => handleScroll("#Contact")}
+          >
+            Let's Connect
+          </motion.li>
+        </div>
       </NavContainer>
     </Container>
   );

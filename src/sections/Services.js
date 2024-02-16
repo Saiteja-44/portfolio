@@ -47,6 +47,12 @@ const Title = styled.h1`
   top: 0.75%;
   left: 1%;
   z-index: 11;
+  @media (max-width: 64em) {
+    font-size: 7vw;
+  }
+  @media (max-width: 48em) {
+    font-size: 7vw;
+  }
 `;
 const Left = styled.div`
   width: 30%;
@@ -68,6 +74,24 @@ const Left = styled.div`
     font-weight: 400;
     width: 80%;
     margin-top: 4%;
+  }
+  @media (max-width: 64em) {
+    p {
+      font-size: 2vw;
+    }
+  }
+
+  @media (min-width: 31em) and (max-width: 48em) {
+    width: 40%;
+    p {
+      font-size: 2.5vw;
+    }
+  }
+  @media (max-width: 30em) {
+    width: 35%;
+    p {
+      font-size: 3vw;
+    }
   }
 `;
 
@@ -109,6 +133,9 @@ const Item = styled(motion.div)`
     text-align: center;
     cursor: pointer;
     font-family: "Cabinet Grotesk", sans-serif;
+  }
+  @media (max-width: 48em) {
+    width: 7.5rem;
   }
 `;
 

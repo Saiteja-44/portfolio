@@ -40,6 +40,13 @@ const LogoContainer = styled.div`
     font-family: "General Sans", sans-serif;
     font-size: 2vw;
   }
+  @media (max-width: 48em) {
+    h1 {
+      font-size: 10vw;
+    }
+    h3{
+      font-size: 2.9vw;
+    }
 `;
 
 const Contacts = styled.div`
@@ -65,6 +72,16 @@ const Emailbox = styled.div`
   :hover {
     transform: scale(1.2);
   }
+  @media (max-width: 48em) {
+    h4 {
+      font-size: 2.5vw;
+    }
+
+  }
+  @media (max-width: 64em) {
+    h4 {
+      font-size: 2vw;
+    }
 `;
 
 const Phonebox = styled.div`
@@ -84,6 +101,15 @@ const Phonebox = styled.div`
   :hover {
     transform: scale(1.2);
   }
+  @media (max-width: 48em) {
+    h4 {
+      font-size: 2.5vw;
+    }
+  }
+  @media (max-width: 64em) {
+    h4 {
+      font-size: 2vw;
+    }
 `;
 
 const Socials = styled.div`
@@ -96,6 +122,10 @@ const Socials = styled.div`
     height: 15%;
     width: 15%;
   }
+  @media (max-width: 64em) {
+    width: 50%;
+    justify-content: space-between;
+  }
 `;
 const Resume = styled.div`
   background-color: #c9c98c;
@@ -107,7 +137,10 @@ const Resume = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 3%;
-  
+  @media (max-width: 64em) {
+    width: 45vw;
+    height: 7vw;
+    font-size: 2.5vw;
   }
 `;
 
@@ -127,6 +160,10 @@ const FooterComponent = styled(motion.footer)`
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     padding: 0 1.2vw;
+    @media (max-width: 48em) {
+      justify-content: center;
+    }
+
 
 
   }
@@ -144,6 +181,9 @@ const FooterComponent = styled(motion.footer)`
     }
     }
   }
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
 `;
 
 const Bottom = styled.div`
@@ -158,6 +198,9 @@ const Bottom = styled.div`
 
   a {
     text-decoration: underline;
+  }
+  @media (max-width: 48em) {
+    font-size: 2.5vw;
   }
 `;
 const Link = styled.a`

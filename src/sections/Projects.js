@@ -61,6 +61,16 @@ const Project1 = styled.div`
   width: 40%;
   height: 42%;
   border-radius: 3%;
+  @media (max-width: 48em) {
+    width: 80%;
+    height: 20%;
+    top: 8%;
+  }
+  @media (max-width: 64em) {
+    width: 80%;
+    height: 25%;
+    top: 8%;
+  }
 `;
 
 const Project2 = styled.div`
@@ -70,6 +80,18 @@ const Project2 = styled.div`
   width: 30%;
   height: 31%;
   border-radius: 3%;
+  @media (max-width: 48em) {
+    width: 80%;
+    height: 15%;
+    top: 30%;
+    right: 10%;
+  }
+  @media (max-width: 64em) {
+    width: 80%;
+    height: 20%;
+    top: 35%;
+    right: 10%;
+  }
 `;
 
 const Project3 = styled.div`
@@ -79,6 +101,12 @@ const Project3 = styled.div`
   width: 30%;
   height: 40%;
   border-radius: 3%;
+  @media (max-width: 64em) {
+    width: 80%;
+    height: 18%;
+    left: 10%;
+    bottom: 24%;
+  }
 `;
 
 const Project4 = styled.div`
@@ -88,6 +116,12 @@ const Project4 = styled.div`
   width: 40%;
   height: 42%;
   border-radius: 3%;
+  @media (max-width: 64em) {
+    width: 80%;
+    height: 18%;
+    left: 10%;
+    bottom: 4%;
+  }
 `;
 
 const Projects = () => {

@@ -27,6 +27,12 @@ const Title = styled.h2`
   text-align: center;
   margin-top: 2px;
   color: #fff;
+  @media (max-width: 48em) {
+    font-size: 3.5vw;
+  }
+  @media (max-width: 64em) {
+    font-size: 2.5vw;
+  }
 `;
 
 const Description = styled.h2`
@@ -34,6 +40,12 @@ const Description = styled.h2`
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 500;
   color: #fff;
+  @media (max-width: 48em) {
+    font-size: 2.2vw;
+  }
+  @media (max-width: 64em) {
+    font-size: 2.2vw;
+  }
 `;
 const Tags = styled.div`
   border-top: 2px solid #fff;
@@ -67,11 +79,20 @@ const Link = styled.a`
     background-color: #d1d1b2;
     color: #000;
   }
+  @media (max-width: 48em) {
+    font-size: 2.5vw;
+    height: 40%;
+  }
+  @media (max-width: 64em) {
+    font-size: 2vw;
+  }
 `;
 
 const Git = styled.a`
   color: inherit;
   text-decoration: none;
+  width: 40px;
+  height: 40px;
   & > * {
     fill: #202020;
   }
@@ -79,6 +100,10 @@ const Git = styled.a`
     & > * {
       fill: #d1d1b2;
     }
+  }
+  @media (max-width: 48em) {
+    width: 25px;
+    height: 25px;
   }
 `;
 
@@ -96,7 +121,7 @@ const Card = ({ name, img, alt, type, link, description, git }) => {
           Visit
         </Link>
         <Git href={git} target="_blank">
-          <Github width={40} height={40} />
+          <Github />
         </Git>
       </Footer>
     </Box>

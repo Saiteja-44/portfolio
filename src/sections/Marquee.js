@@ -14,6 +14,10 @@ const Section = styled.section`
 
   /* background-color: blue; */
   position: relative;
+
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
 `;
 
 const Container = styled.div`
@@ -24,6 +28,8 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
+  @media (max-width: 64em) {
+    justify-content: center;
   }
 `;
 
@@ -45,6 +51,18 @@ const Banner = styled.h1`
   span.word {
     color: #9a9a5a;
     display: "inline";
+  }
+
+  @media (max-width: 64em) {
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 48em) {
+    font-size: 5vw;
+    margin: 0.5rem 0;
+  }
+  @media (max-width: 30em) {
+    font-size: 4.5vw;
   }
 `;
 
