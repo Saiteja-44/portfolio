@@ -18,6 +18,7 @@ const Box = styled(motion.li)`
     transition: transform 0.2s ease;
     &:hover {
       transform: scale(1.05);
+      cursor: pointer;
     }
   }
 `;

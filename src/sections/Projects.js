@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 // import gsap from "gsap";
 // import ScrollTrigger from "gsap/ScrollTrigger";
-import { React, useState, useEffect } from "react";
+import { React } from "react";
 import styled from "styled-components";
 // import Work from "../components/Workdata";
 // import { Github } from "../assets/Svgs/Svj";
@@ -10,7 +10,7 @@ import Weather from "../assets/weatherl.png";
 import Mfcharts from "../assets/Mfcharts.png";
 import Linkedin from "../assets/LinkedinL.png";
 import Spotify from "../assets/Spotifycl.png";
-import Cursor from "../components/Cursor";
+// import Cursor from "../components/Cursor";
 
 const Section = styled.section`
   min-height: 220vh;
@@ -24,7 +24,7 @@ const Overlay = styled.div`
   width: 100%;
   height: 100%;
   border: 3px solid black;
-  border-radius: 4%;
+  border-radius: 0%;
   background: #000;
 `;
 
@@ -125,7 +125,7 @@ const Project4 = styled.div`
 `;
 
 const Projects = () => {
-  const [scaling, setscaling] = useState(false);
+  // const [scaling, setscaling] = useState(false);
 
   return (
     <Section id="Projects" className="panel">
@@ -137,10 +137,10 @@ const Projects = () => {
         >
           Projects
         </Title>
-        <Cursor scaling={scaling} />
+        {/* <Cursor scaling={scaling} /> */}
         <Project1
-          onMouseEnter={() => setscaling(true)}
-          onMouseLeave={() => setscaling(false)}
+        // onMouseEnter={() => setscaling(true)}
+        // onMouseLeave={() => setscaling(false)}
         >
           <Card
             link="https://saiteja-44.github.io/Weather_App/"
@@ -154,22 +154,22 @@ const Projects = () => {
           />
         </Project1>
         <Project2
-          onMouseEnter={() => setscaling(true)}
-          onMouseLeave={() => setscaling(false)}
+        // onMouseEnter={() => setscaling(true)}
+        // onMouseLeave={() => setscaling(false)}
         >
           <Card
-            link="https://github.com/AbhiGattineni/MFCharts"
+            link="https://github.com/Saiteja-44/MFCharts"
             img={Mfcharts}
             alt="Mfcharts"
             name="MF Charts"
             description="It is a MF potfolio app with real time MF Tracker ."
             type="# • React  # •  Node  # • CSS"
-            git="https://github.com/AbhiGattineni/MFCharts"
+            git="https://github.com/Saiteja-44/MFCharts"
           />
         </Project2>
         <Project3
-          onMouseEnter={() => setscaling(true)}
-          onMouseLeave={() => setscaling(false)}
+        // onMouseEnter={() => setscaling(true)}
+        // onMouseLeave={() => setscaling(false)}
         >
           <Card
             link="https://github.com/Saiteja-44/LinkedIN_Automation"
@@ -182,17 +182,17 @@ const Projects = () => {
           />
         </Project3>
         <Project4
-          onMouseEnter={() => setscaling(true)}
-          onMouseLeave={() => setscaling(false)}
+        // onMouseEnter={() => setscaling(true)}
+        // onMouseLeave={() => setscaling(false)}
         >
           <Card
-            link="https://github.com/Saiteja-44/coding-challenge"
+            link="https://github.com/Saiteja-44/Baggage-surveillance-Analytics"
             img={Spotify}
-            alt="Spotify"
-            name="Spotify Clone"
-            description="It is build using NextJS and tailwind CSS, with real time data from Spotify API."
-            type="# • NextJS  # •  TailwindCSS  # • SpotifyAPI"
-            git="https://github.com/Saiteja-44/coding-challenge"
+            alt="Surveillance"
+            name="Surveillance-Analytics"
+            description=" It is used to calculate and analyze the performance of L1-L3 operartors at Airport surveillance"
+            type="# • Python  # •  TailwindCSS  # • OpenAPI"
+            git="https://github.com/Saiteja-44/Baggage-surveillance-Analytics"
           />
         </Project4>
       </Overlay>

@@ -23,6 +23,9 @@ const Section = styled.section`
   color: #2e2e2e;
 
   position: relative;
+  @media (max-width: 48em) {
+    justify-content: space-evenly;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -56,6 +59,7 @@ const Contacts = styled.div`
 `;
 
 const Emailbox = styled.div`
+a{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,6 +86,7 @@ const Emailbox = styled.div`
     h4 {
       font-size: 2vw;
     }
+  }
 `;
 
 const Phonebox = styled.div`
@@ -237,8 +242,10 @@ const Contact = () => {
 
       <Contacts>
         <Emailbox>
-          <img src={Email} alt="email icon" />
-          <h4>saitejap444@gmail.com</h4>
+          <a href="mailto:saitejap444@gmail.com?subject=Hello">
+            <img src={Email} alt="email icon" />
+            <h4>saitejap444@gmail.com</h4>
+          </a>
         </Emailbox>
         <Phonebox>
           <img src={Phone} alt="Mobile" />

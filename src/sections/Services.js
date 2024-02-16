@@ -135,7 +135,8 @@ const Item = styled(motion.div)`
     font-family: "Cabinet Grotesk", sans-serif;
   }
   @media (max-width: 48em) {
-    width: 7.5rem;
+    width: 6.5rem;
+    padding: 10px;
   }
 `;
 
