@@ -20,7 +20,7 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 8vw;
+  font-size: 7vw;
   font-family: "General Sans", sans-serif;
   font-weight: 500;
   color: #9a9a5a;
@@ -56,10 +56,10 @@ const Left = styled.div`
     left: 50%;
     transform: translate(-50%, -50%) !important;
     margin: 0 auto;
-    color: #e0ded6;
+    color: #ffffce;
 
     padding: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2.5vw;
 
     backdrop-filter: blur(2px);
@@ -68,11 +68,11 @@ const Left = styled.div`
   }
   @media (max-width: 48em) {
     font-size: 3vw;
-    color: #e0ded6;
+    color: #ffffce;
   }
   @media (max-width: 30em) {
     font-size: 3.8vw;
-    color: #e0ded6;
+    color: #ffffce;
     padding: 2rem;
     width: 70%;
   }
@@ -91,12 +91,14 @@ const Right = styled.div`
     position: absolute;
     right: 70%;
     bottom: 20%;
+    border-radius: 2%;
   }
   .small-img-1 {
     width: 30%;
     position: absolute;
     left: 94%;
     top: 30%;
+    border-radius: 2%;
   }
   @media (max-width: 64em) {
     width: 100%;
@@ -112,7 +114,7 @@ const Right = styled.div`
     .small-img-1 {
       width: 30%;
       height: auto;
-      left: 5%;
+      left: 10%;
       bottom: 10%;
     }
     .small-img-2 {

@@ -34,7 +34,7 @@ const Container = styled.div`
 `;
 
 const Banner = styled.h1`
-  font-size: 4.5vw;
+  font-size: 4vw;
   font-family: "General Sans";
   color: #fff;
   /* position: absolute; */
@@ -45,7 +45,7 @@ const Banner = styled.h1`
     display: block;
     background-color: #111;
 
-    padding: 1rem 2rem;
+    padding: 0.9vw 2vw;
   }
 
   span.word {
@@ -83,17 +83,17 @@ const Marquee = () => {
               className="word"
               initial={{ color: "#fff" }}
               whileInView={{ color: "#9e9e40" }}
-              transition={{ delay: 0.3, duration: 0.4 }}
+              transition={{ delay: 0.1, duration: 0.3 }}
             >
-              belive
+              believe
             </motion.span>{" "}
             in pushing
           </span>
         </Banner>
         <Banner
-          data-scroll
-          data-scroll-speed="-2"
-          data-scroll-target="#direction"
+        // data-scroll
+        // data-scroll-speed="-2"
+        // data-scroll-target="#direction"
         >
           <span
             className="box"
@@ -138,14 +138,14 @@ const Marquee = () => {
         </Banner>
         <Banner
           data-scroll
-          data-scroll-speed="6"
+          data-scroll-speed="1"
           data-scroll-target="#direction"
         >
           <span
             className="box"
             data-scroll
             data-scroll-direction="horizontal"
-            data-scroll-speed="5"
+            data-scroll-speed="2"
             data-scroll-target="#direction"
           >
             that surpass expectations in all aspects.

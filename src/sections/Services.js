@@ -73,7 +73,7 @@ const Left = styled.div`
     font-family: "Cabinet Grotesk", sans-serif;
     font-weight: 400;
     width: 80%;
-    margin-top: 4%;
+    margin-top: 5%;
   }
   @media (max-width: 64em) {
     p {
@@ -178,7 +178,7 @@ const Services = () => {
           scroller: ".App", //locomotive-scroll
           scrub: 1,
           pin: true,
-          // markers: true,
+          markers: true,
           // anticipatePin: 1,
         },
         height: `${scrollingElement.scrollWidth}px`,
@@ -192,7 +192,7 @@ const Services = () => {
           end: `${pinWrapWidth} bottom`,
           scroller: ".App", //locomotive-scroll
           scrub: 1,
-          // markers: true,
+          markers: true,
         },
         x: -pinWrapWidth,
 

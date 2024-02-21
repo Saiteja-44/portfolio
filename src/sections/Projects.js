@@ -147,7 +147,7 @@ const Projects = () => {
             img={Weather}
             alt="Weather"
             name="Weather Application"
-            description="It is build on top of the React JS, with Openweather API and animations for
+            description="It is built on top of React JS, with Openweather API and animations for
                 smooth scrolling animations."
             type=" # • React  # •  WeatherAPI  # • CSS"
             git="https://github.com/Saiteja-44/Weather_App"
@@ -162,7 +162,7 @@ const Projects = () => {
             img={Mfcharts}
             alt="Mfcharts"
             name="MF Charts"
-            description="It is a MF potfolio app with real time MF Tracker ."
+            description="It is A Mutual Funds potfolio app with a real time Funds Tracker ."
             type="# • React  # •  Node  # • CSS"
             git="https://github.com/Saiteja-44/MFCharts"
           />
@@ -176,7 +176,7 @@ const Projects = () => {
             img={Linkedin}
             alt="Linkedin"
             name="Linkedin Automation"
-            description="It is tool build using Python and Selenium to send personalized requests. "
+            description="It is a tool, built using Python and Selenium to send personalized requests. "
             git="https://github.com/Saiteja-44/LinkedIN_Automation"
             type="# • Python  # •  Selenium  # • WebDriver"
           />

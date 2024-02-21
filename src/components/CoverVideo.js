@@ -66,7 +66,7 @@ const Title = styled.div`
   color: ${(props) => props.theme.text};
 
   @media (max-width: 48em) {
-    right:5%;
+    right: 5%;
     bottom: 10%;
     width: 90%;
   }
@@ -74,8 +74,6 @@ const Title = styled.div`
     bottom: 10%;
     width: 90%;
   }
-
-
 
   h1 {
     font-family: "General Sans", sans-serif;
@@ -103,7 +101,7 @@ const Title = styled.div`
     line-height: normal;
 
     @media (max-width: 48em) {
-      font-size: 9.5vw);
+      font-size: 8.4vw;
       -webkit-text-stroke-width: 2px;
     }
     @media (min-width: 49em) and (max-width: 64em) {
